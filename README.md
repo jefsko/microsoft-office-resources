@@ -15,7 +15,7 @@ sequences even when their values happen to match.
 
 ## Current collection version
 
-v1.0.0
+v1.0.1
 
 ## Components
 
@@ -27,10 +27,13 @@ v1.0.0
 
 ## Releases
 
-Git tags and GitHub Releases apply to the **collection**. A collection
-release records the component versions it contains. Individual
-components do not require separate GitHub Releases or tags unless a
-future need justifies them.
+Collection tags use `vX.Y.Z` and identify complete repository snapshots.
+Released component-version milestones use namespaced tags such as
+`usps-label-228/v1.0.0`. A collection release records the component
+versions it contains.
+
+GitHub Releases are **collection-level only**. Component tags are Git
+milestones and do not receive separate GitHub Releases.
 
 See `RELEASES.md` and `docs/versioning-and-releases.md`.
 

@@ -10,8 +10,9 @@ Repository: `jefsko/microsoft-office-resources`
     materials, measurements, documentation, examples, and tips for Word
     and other Office applications.
 -   Collection release tags: annotated `vX.Y.Z`
--   GitHub Releases: collection-wide, created from matching collection
-    tags
+-   Component milestone tags: annotated `<component>/vX.Y.Z`
+-   GitHub Releases: collection-wide only, created from matching
+    collection tags; component tags do not receive separate releases
 
 ## Configuration verification
 

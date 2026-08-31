@@ -7,6 +7,7 @@
 -   Keep `main` synchronized with `origin/main`.
 -   Preserve historical tags/releases.
 -   Use annotated collection tags in `vX.Y.Z` form.
+-   Use annotated component milestone tags in `<component>/vX.Y.Z` form.
 -   Keep root/component VERSION and changelog state synchronized with
     their respective scopes.
 -   Do not use untagged post-release commits to modify a published
@@ -49,4 +50,6 @@ if ($LASTEXITCODE -ne 0) { throw "git push failed" }
 git status
 ```
 
-For releases, follow `docs/release-process.md`.
+For releases, follow `docs/release-process.md`. GitHub Releases are
+collection-level only; component tags do not receive separate GitHub
+Releases.

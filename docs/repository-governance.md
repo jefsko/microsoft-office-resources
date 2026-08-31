@@ -22,8 +22,13 @@ maintained components may have their own component-root `VERSION`. These
 are independent Semantic Versioning sequences. Individual artifacts may
 additionally maintain monotonically increasing revision lineages.
 
-Git tags and GitHub Releases normally apply to collection versions. Each
-collection release records the component versions it contains.
+Collection tags use annotated `vX.Y.Z` tags. Formally released component
+version milestones use namespaced annotated tags such as
+`usps-label-228/v1.0.0`. Each collection release records the component
+versions it contains.
+
+GitHub Releases are collection-level only. Component tags do not receive
+separate GitHub Releases.
 
 ## Naming
 

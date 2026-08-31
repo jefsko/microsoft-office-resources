@@ -1,6 +1,6 @@
 # USPS Label 228 --- Handover and Summary
 
-**Document revision:** Rev. 11\
+**Document revision:** Rev. 12\
 **As of:** August 29, 2026\
 **Subject:** Microsoft Word template for USPS Label 228 (December 2023
 Priority Mail label)\
@@ -546,16 +546,20 @@ reused; future template development resumes with Template Rev19.
 -   **Revision** tracks an individual artifact's development lineage.
     Revisions increase monotonically, do not reset at release
     boundaries, and are never reused.
--   **Version** identifies an approved overall project state and uses
-    `vX.Y.Z`. The initial USPS Label 228 repository release is `v1.0.0`.
--   **Release** is the formal publication/distribution of a project
-    version and is composed from specific accepted artifact revisions.
+-   **Component version** identifies an approved USPS Label 228 project
+    state and uses `vX.Y.Z`. The current component version is v1.0.0.
+-   **Collection version** identifies the complete
+    `microsoft-office-resources` repository state independently of the
+    component version.
+-   **Release** is formal publication/distribution. GitHub Releases are
+    collection-level; the component receives a namespaced Git milestone
+    tag when formally released.
 -   **Canonical** means authoritative in context. Use **canonical
     filename** for the official filename.
 
 The canonical template filename is `USPS-Label-228-Template.dotx` and
-remains stable across releases; Git tags/releases supply version
-context.
+remains stable across releases; component VERSION/changelog state and Git
+tags supply version context.
 
 ### Metadata Normalization Policy
 
@@ -594,7 +598,8 @@ Routine per-file `.sha256` sidecars will not be committed throughout the
 source tree. SHA-256 is used at the release/distribution boundary and in
 the normalization audit.
 
-Planned `v1.0.0` GitHub Release assets:
+Planned curated assets for the first collection GitHub Release
+(collection v1.0.1, containing USPS Label 228 component v1.0.0):
 
 -   `USPS-Label-228-Template.dotx`
 -   `USPS-Label-228-Reference.png`
@@ -646,17 +651,17 @@ development resumes with Rev19.
 
 ## Final Word-Template Lock-In
 
-**Production Rev. 17 is locked as the accepted current/final
+**Template Rev. 17 is locked as the accepted current/final
 Word-template baseline for now.**
 
 -   Canonical template: `USPS-Label-228-Template.dotx`
--   Preserved production revision:
-    `USPS-Label-228-Production-Rev17.dotx`
--   The canonical template and Production Rev. 17 are byte-for-byte
-    identical.
+-   Preserved normalized template revision:
+    `development/template-revisions/USPS-Label-228-Template-Rev17.dotx`
+-   The canonical template and normalized Template Rev. 17 are
+    byte-for-byte identical.
 -   SHA-256:
     `ed0f5eca21ddb88fb2179c935a534e2c13b03eba8e6057ad601cccd58c1a1f9d`
--   Production Rev. 18 was reverted and is explicitly **not accepted**.
+-   Template Rev. 18 was reverted and is explicitly **not accepted**.
 -   No further alignment change is currently required.
 -   Any future Word-template change must begin from the locked Rev. 17
     baseline and create a **new production revision** rather than
@@ -789,3 +794,17 @@ experimental revisions. Preserve the accepted Word behavior and the
 exact **66:85** reference-image geometry unless a new physical
 calibration or explicitly approved design change provides a reason to
 revise them.
+
+## Collection v1.0.1 Tagging Integration
+
+The finalized repository tagging model distinguishes collection and
+component milestones:
+
+-   Collection tags use `vX.Y.Z`.
+-   USPS Label 228 component milestones use namespaced tags such as
+    `usps-label-228/v1.0.0`.
+-   GitHub Releases remain collection-level only.
+-   USPS Label 228 remains component v1.0.0; no Label 228 Office, image,
+    or logo artifact changed as part of collection v1.0.1.
+-   The initial `usps-label-228/v1.0.0` component tag is intended to
+    point to the collection v1.0.1 publication commit.
