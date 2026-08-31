@@ -85,6 +85,21 @@ Archives intended for convenient distribution belong primarily as GitHub
 Release assets. Git tags and GitHub source archives preserve complete
 versioned repository snapshots.
 
+## Backlog governance
+
+`BACKLOG.md` is the authoritative repository work register for active and
+future work.
+
+Structured work-item IDs follow the shared cross-repository convention
+`<PREFIX>-###`. This repository uses `MOR-###`.
+
+- numbering begins at `MOR-001` and is assigned monotonically;
+- the numeric portion is zero-padded to at least three digits;
+- after `MOR-999`, continue with `MOR-1000`;
+- IDs are permanent once assigned and are never recycled or renumbered;
+- candidate, revision, build, version, and artifact identifiers are
+  separate conventions and are not backlog work-item IDs.
+
 ## Git files
 
 Use `.editorconfig` for basic text-editor consistency, `.gitignore` for
