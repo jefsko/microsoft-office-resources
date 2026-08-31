@@ -1,0 +1,25 @@
+# Normalize repository text files
+* text=auto
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Microsoft Office and image/archive artifacts are binary
+*.doc binary
+*.docx binary
+*.dot binary
+*.dotx binary
+*.xls binary
+*.xlsx binary
+*.xlt binary
+*.xltx binary
+*.ppt binary
+*.pptx binary
+*.pot binary
+*.potx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary

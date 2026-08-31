@@ -1,0 +1,16 @@
+# Microsoft Office temporary/lock files
+~$*
+
+# Windows shell metadata
+Thumbs.db
+Desktop.ini
+
+# Common editor/IDE metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local scratch/output directories
+tmp/
+temp/
