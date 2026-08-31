@@ -10,8 +10,9 @@
 -   Use annotated component milestone tags in `<component>/vX.Y.Z` form.
 -   Keep root/component VERSION and changelog state synchronized with
     their respective scopes.
--   Do not use untagged post-release commits to modify a published
-    release state.
+-   Preserve published release states as immutable; later commits on
+    `main` are normal future development and do not alter prior tags or
+    releases.
 
 ## Normal update workflow
 

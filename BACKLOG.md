@@ -27,6 +27,22 @@ here.
                                          outside         a concrete need.
                                          contributions
                                          become relevant
+
+  `MOR-004`    Deferred     Repository   Standardize     Reconcile
+                                         `VERSION`       `.gitattributes`
+                                         line endings    with `.editorconfig`
+                                                         and eliminate
+                                                         ambiguous LF/CRLF
+                                                         handling.
+
+  `MOR-005`    Deferred     Repository   Establish       Use a
+                                         repository      non-modifying
+                                         cleanup         assessment first;
+                                         procedure       review proposed
+                                                         cleanup before
+                                                         changing files and
+                                                         verify repository
+                                                         state afterward.
   --------------------------------------------------------------------------
 
 ## Future Resources

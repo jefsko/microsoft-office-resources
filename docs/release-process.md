@@ -43,5 +43,16 @@ Stop on any failed verification.
 10. Upload approved curated assets and `SHA256SUMS`.
 11. Verify published assets/checksums.
 
-Do not make an untagged post-release synchronization commit. Any
-subsequent repository change belongs to a subsequent collection version.
+Published collection tags and GitHub Releases are immutable. Do not use
+a later commit to alter or reconstruct the state represented by an
+already-published release.
+
+After publication, `main` may advance through ordinary development,
+documentation, backlog, governance, and maintenance commits. Such
+commits represent work toward a future collection version and do not
+individually require a version bump, tag, or GitHub Release.
+
+Release-state documentation should normally be complete before the
+release commit and tag; avoid a post-release synchronization commit whose
+sole purpose is to make repository documentation describe the release
+that was just published.
