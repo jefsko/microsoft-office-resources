@@ -18,7 +18,10 @@ component milestones use namespaced annotated Git tags.
 6.  Verify reference/assets and any component-specific audit
     requirements.
 7.  Build curated release assets only when useful.
-8.  Generate one `SHA256SUMS` covering manually uploaded payload assets.
+8.  Select and document the checksum convention for manually uploaded
+    payload assets, then generate SHA-256 coverage for every payload.
+    Collection v1.0.1 used one `<payload>.sha256` sidecar per payload; a
+    future release may deliberately choose a single `SHA256SUMS` instead.
 9.  Stage the intended release state and require
     `git diff --cached --check` to produce no output.
 10. Run the complete repository audit.
@@ -40,8 +43,9 @@ Stop on any failed verification.
 8.  Verify every remote tag resolves to the intended commit.
 9.  Publish GitHub Release `Microsoft Office Resources vX.Y.Z` from the
     **collection** tag only.
-10. Upload approved curated assets and `SHA256SUMS`.
-11. Verify published assets/checksums.
+10. Upload approved curated payload assets and their checksum files.
+11. Verify every published payload against its checksum information and
+    against the tagged source where applicable.
 
 Published collection tags and GitHub Releases are immutable. Do not use
 a later commit to alter or reconstruct the state represented by an

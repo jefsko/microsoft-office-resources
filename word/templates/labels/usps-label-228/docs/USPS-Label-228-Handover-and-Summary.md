@@ -1,7 +1,7 @@
 # USPS Label 228 --- Handover and Summary
 
-**Document revision:** Rev. 12\
-**As of:** August 29, 2026\
+**Document revision:** Rev. 13\
+**As of:** August 30, 2026\
 **Subject:** Microsoft Word template for USPS Label 228 (December 2023
 Priority Mail label)\
 **Canonical Word template name:** `USPS-Label-228-Template.dotx`\
@@ -32,9 +32,10 @@ Microsoft Word:
     that document does not alter the defaults stored in the template.
 -   The final alignment target for both FROM and TO values is
     approximately **1/4 inch down × 3/8 inch right** from the
-    corresponding printed label legends. Production Rev. 15 incorporates
-    the final TO vertical correction requested during physical alignment
-    review.
+    corresponding printed label legends. Template Rev. 17 (originally
+    Production Rev. 17) is the locked accepted baseline and incorporates
+    the final TO vertical correction after the intermediate Rev15/Rev16
+    adjustments.
 
 The canonical template filename remains:
 
@@ -194,9 +195,9 @@ Word and should be treated as regression requirements:
 7.  The long field labels themselves do not print.
 8.  Gridlines do not print.
 9.  Multiline address entry works.
-10. Physical alignment is generally good. Production Rev. 16
-    incorporates the final approved TO vertical correction documented
-    below.
+10. Physical alignment is generally good. Template Rev. 17 (originally
+    Production Rev. 17) is the final accepted alignment baseline after
+    the documented Rev15/Rev16 intermediate adjustments.
 
 ## Remaining Physical Calibration
 
@@ -504,20 +505,27 @@ Before replacing either canonical artifact in the future, re-verify:
     image.
 -   `USPS-Label-228-Handover-and-Summary.md` --- authoritative project
     handover and summary.
--   `USPS-Label-228-Logo-Asset-Set.zip` --- locked packaged USPS logo
-    reference asset set.
+-   `assets/logos/` --- locked individual USPS logo/reference PNG
+    assets retained in source.
+-   `USPS-Label-228-Logo-Assets.zip` --- curated v1.0.1 GitHub Release
+    bundle built from the accepted source logo assets.
 -   `USPS-Logo-Asset-Preview-Sheet.png` --- compact visual/contact-sheet
-    reference included with the logo asset set.
+    reference included with the logo assets.
 
 Working files such as `USPS-Label-228-Production-Rev17.dotx`,
 calibration documents, and earlier revisions are development/history
 artifacts and should not replace the canonical filenames above.
 
-## Public-Repository Normalization Plan
+## Public-Repository Normalization Plan (Historical)
 
-The new public `microsoft-office-resources` repository will preserve the
-USPS Label 228 development history while normalizing its organization
-and terminology for long-term consistency.
+This section preserves the approved pre-import normalization plan for
+historical context. The public repository was subsequently created and
+the execution results are recorded in **Repository Normalization
+Execution Update** below.
+
+The public `microsoft-office-resources` repository preserves the USPS
+Label 228 development history while normalizing its organization and
+terminology for long-term consistency.
 
 ### Historical Template Naming
 
@@ -594,22 +602,34 @@ no unintended content, layout, formatting, or behavior changed.
 
 ### SHA-256 and Release Assets
 
-Routine per-file `.sha256` sidecars will not be committed throughout the
+Routine per-file `.sha256` sidecars are not committed throughout the
 source tree. SHA-256 is used at the release/distribution boundary and in
 the normalization audit.
 
-Planned curated assets for the first collection GitHub Release
-(collection v1.0.1, containing USPS Label 228 component v1.0.0):
+Collection v1.0.1 was published as the first collection GitHub Release,
+containing USPS Label 228 component v1.0.0. Eight files were manually
+uploaded: four payloads and a matching `.sha256` sidecar for each
+payload.
 
+-   `microsoft-office-resources-v1.0.1.zip`
+-   `microsoft-office-resources-v1.0.1.zip.sha256`
 -   `USPS-Label-228-Template.dotx`
+-   `USPS-Label-228-Template.dotx.sha256`
 -   `USPS-Label-228-Reference.png`
--   `USPS-Label-228-Logo-Asset-Set.zip`
--   `SHA256SUMS`
+-   `USPS-Label-228-Reference.png.sha256`
+-   `USPS-Label-228-Logo-Assets.zip`
+-   `USPS-Label-228-Logo-Assets.zip.sha256`
 
-`SHA256SUMS` will reference the other release assets. The old Complete
-Project ZIP will not be a GitHub Release asset.
+Post-publication verification confirmed all four payload sidecars. The
+collection ZIP was reproducibly verified before publication; the
+template and reference image matched the tagged source, and every file
+inside the logo-assets ZIP matched the tagged source.
 
-Planned audit: `docs/audits/v1.0.0-repository-normalization-audit.md`
+The older Complete Project ZIP and its historical internal package
+structure were not used as GitHub Release assets.
+
+Normalization audit:
+`docs/audits/v1.0.0-repository-normalization-audit.md`
 
 ## Repository Normalization Execution Update
 
@@ -659,17 +679,25 @@ Word-template baseline for now.**
     `development/template-revisions/USPS-Label-228-Template-Rev17.dotx`
 -   The canonical template and normalized Template Rev. 17 are
     byte-for-byte identical.
--   SHA-256:
-    `ed0f5eca21ddb88fb2179c935a534e2c13b03eba8e6057ad601cccd58c1a1f9d`
+-   Repository/post-normalization SHA-256:
+    `3660b078d29a168103785ba474043892898f5e2ad737d39d49402b2d99c41f8c`
+-   The earlier pre-normalization Rev17 SHA-256 was
+    `ed0f5eca21ddb88fb2179c935a534e2c13b03eba8e6057ad601cccd58c1a1f9d`;
+    the normalization audit records the controlled metadata-only byte
+    change from the original file to the repository copy.
 -   Template Rev. 18 was reverted and is explicitly **not accepted**.
 -   No further alignment change is currently required.
 -   Any future Word-template change must begin from the locked Rev. 17
     baseline and create a **new production revision** rather than
     silently altering Rev. 17 or the historical record.
 
-## Canonical Distribution Package
+## Canonical Distribution Package (Historical Pre-Repository Package)
 
-The final complete distribution package uses **canonical final filenames
+This section records the complete project package created before the
+public GitHub Release workflow was finalized. It remains historical
+handover context and is not the curated v1.0.1 GitHub Release asset set.
+
+The final complete distribution package used **canonical final filenames
 only**. The revision-specific development copy
 `USPS-Label-228-Production-Rev17.dotx` is preserved as historical
 working evidence outside the distribution package, but is intentionally
@@ -703,7 +731,7 @@ pure-white-background PNG and a transparent-background PNG:
 5.  `USPS-Logo-Priority-Mail-White.png`
 6.  `USPS-Logo-Priority-Mail-Transparent.png`
 
-The package also contains:
+The historical pre-repository package also contained:
 
 -   `USPS-Logo-Asset-Preview-Sheet.png` --- compact visual/contact-sheet
     reference for the six logo assets.
@@ -768,9 +796,9 @@ Minor technical reconstruction or cleanup is acceptable only when it is
 visually indistinguishable and improves fidelity. Creative
 reinterpretation or redesign is not the objective.
 
-### Locked Package
+### Locked Package (Historical Pre-Repository Bundle)
 
-The accepted packaged set is:
+The accepted pre-repository packaged set was:
 
 `USPS-Label-228-Logo-Asset-Set.zip`
 
@@ -778,15 +806,18 @@ SHA-256:
 
 `3b87c23f6ad55ac6e933f9137a6852b30a6b0ab8b6c1d81a738eaf92981a4fde`
 
-Treat this hash as identifying the currently locked logo-asset package.
-Any future change to an included logo asset or preview sheet should
-produce a new package revision and a new SHA-256 rather than silently
-replacing this baseline.
+Treat this hash as identifying that historical locked logo-asset
+package. The published collection v1.0.1 distribution bundle is named
+`USPS-Label-228-Logo-Assets.zip`; its contents were verified against the
+accepted source assets. Any future change to an included logo asset or
+preview sheet should produce a new package revision and a new SHA-256
+rather than silently replacing a locked baseline.
 
 ## Continuation Point
 
-No additional feature work is currently required. Production Rev. 17 is
-locked as the accepted Word-template baseline for now.
+No additional feature work is currently required. Template Rev. 17
+(originally Production Rev. 17) is locked as the accepted Word-template
+baseline for now.
 
 If work resumes, begin from the locked canonical artifacts above,
 including the accepted USPS logo asset set, rather than from earlier
@@ -806,5 +837,8 @@ component milestones:
 -   GitHub Releases remain collection-level only.
 -   USPS Label 228 remains component v1.0.0; no Label 228 Office, image,
     or logo artifact changed as part of collection v1.0.1.
--   The initial `usps-label-228/v1.0.0` component tag is intended to
-    point to the collection v1.0.1 publication commit.
+-   Collection tag `v1.0.1` and component tag
+    `usps-label-228/v1.0.0` both resolve to publication commit
+    `34ba0c41c0ba607800192f4d92abcf12979c0d91`.
+-   Collection v1.0.1 is the first published GitHub Release for the
+    repository; no separate GitHub Release exists for the component tag.

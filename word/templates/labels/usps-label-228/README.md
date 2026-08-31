@@ -26,13 +26,17 @@ not included; future template development resumes at Rev19.
 
 ## Versioning terminology
 
-Artifact revisions track individual artifact development. Project
-versions use `vX.Y.Z`. A release is the formal publication of a project
-version and is composed from specific artifact revisions. Canonical
-means authoritative in context; the canonical filename remains stable
-while Git tags/releases provide version context.
+Artifact revisions track individual artifact development. Component
+versions use `vX.Y.Z` independently of the collection version. Formally
+released component milestones use namespaced Git tags such as
+`usps-label-228/v1.0.0`; GitHub Releases remain collection-level only.
+Canonical means authoritative in context; the canonical filename remains
+stable while component/collection tags provide version context.
 
 ## Checksums and releases
 
 Routine per-file checksum sidecars are not stored in the source tree.
-GitHub Release assets use a release-level `SHA256SUMS` file.
+Published release payloads receive SHA-256 coverage at the distribution
+boundary. Collection v1.0.1 used one `.sha256` sidecar per manually
+uploaded payload, including the template, reference image, logo-assets
+ZIP, and collection ZIP.

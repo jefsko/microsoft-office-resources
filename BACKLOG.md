@@ -43,7 +43,40 @@ here.
                                                          changing files and
                                                          verify repository
                                                          state afterward.
+
+  `MOR-006`    Completed    Repository   Reconcile       Replace stale
+                                         release         pre-publication
+                                         documentation   wording, align
+                                                         release-asset and
+                                                         checksum guidance
+                                                         with published
+                                                         v1.0.1, and correct
+                                                         USPS Label 228
+                                                         Rev17/release
+                                                         references. No
+                                                         binary assets were
+                                                         changed.
   --------------------------------------------------------------------------
+
+### MOR-004 implementation notes
+
+When MOR-004 is selected for implementation, prefer LF as the explicit
+line ending for root and component `VERSION` files so the Git blob,
+GitHub representation, Windows working tree, and generated repository
+snapshots use the same bytes. The implementation should:
+
+- set an explicit `.gitattributes` rule for `VERSION` files, such as
+  `VERSION text eol=lf`, with an equivalent rule for component `VERSION`
+  files as needed;
+- reconcile `.editorconfig` so it expresses the same LF policy;
+- normalize the tracked `VERSION` files once after the policy is set;
+- verify that the raw working-tree hash and Git-normalized hash no longer
+  diverge solely because of CRLF/LF conversion; and
+- confirm that the version text itself is unchanged and that no unrelated
+  files are modified.
+
+This should be implemented deliberately as MOR-004 rather than as an
+incidental side effect of another work item.
 
 ## Future Resources
 

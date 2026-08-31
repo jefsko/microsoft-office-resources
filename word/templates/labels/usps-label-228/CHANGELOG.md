@@ -2,7 +2,9 @@
 
 ## v1.0.0
 
-Initial public repository release of the USPS Label 228 project.
+Initial public repository version of the USPS Label 228 component. It
+is formally marked by component tag `usps-label-228/v1.0.0` at the
+collection v1.0.1 publication commit.
 
 ### Canonical template
 
@@ -24,7 +26,8 @@ Initial public repository release of the USPS Label 228 project.
 
 -   Includes the locked USPS Label 228 reference PNG.
 -   Includes the locked USPS logo asset set as individual PNG files in
-    source. A ZIP bundle is intended as a GitHub Release asset.
+    source. Collection v1.0.1 publishes them as
+    `USPS-Label-228-Logo-Assets.zip`.
 
 ### Documentation
 

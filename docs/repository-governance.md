@@ -71,9 +71,12 @@ history, and document normalization that changes artifact bytes.
 
 Do not create routine per-file `.sha256` sidecars throughout the tracked
 source tree. Use SHA-256 at release/distribution boundaries and for
-integrity-sensitive normalization/audit operations. A GitHub Release
-should normally use one `SHA256SUMS` file listing the other manually
-uploaded release assets.
+integrity-sensitive normalization/audit operations. Every manually
+uploaded release payload must have documented SHA-256 coverage. The
+initial published GitHub Release, v1.0.1, used one `<payload>.sha256`
+sidecar per payload. A future release may instead use a single
+`SHA256SUMS` manifest if that convention is deliberately selected and
+verified for that release.
 
 ## Archives
 

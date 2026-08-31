@@ -4,6 +4,20 @@ This changelog records changes to the Microsoft Office Resources
 collection. Component-specific changes are recorded in each component's
 changelog.
 
+## Unreleased
+
+### Changed
+
+-   Implemented `MOR-006` to reconcile current documentation with the
+    verified, published v1.0.1 release state.
+-   Replaced stale release-candidate/planning language, recorded the
+    actual v1.0.1 Git/tag/release facts, and aligned checksum guidance
+    with the payload-specific `.sha256` sidecars used for publication.
+-   Corrected USPS Label 228 handover references to the locked Template
+    Rev17 baseline and its post-normalization repository SHA-256.
+-   No collection/component version, published tag/release, Office
+    binary, reference image, or logo asset changed.
+
 ## v1.0.1
 
 Governance and release-model correction. No USPS Label 228 artifact

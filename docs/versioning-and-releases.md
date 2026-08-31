@@ -60,9 +60,11 @@ Every collection release records the component versions it contains.
 -   Collection v1.0.0 is the initial committed repository state and is
     preserved by collection tag `v1.0.0`. It has no GitHub Release.
 -   Collection v1.0.1 establishes the finalized component-tag/release
-    governance and is the first planned GitHub Release.
+    governance and is the first published GitHub Release.
+-   Collection tag `v1.0.1` resolves to publication commit
+    `34ba0c41c0ba607800192f4d92abcf12979c0d91`.
 -   USPS Label 228 remains component v1.0.0 and is formally marked by
-    component tag `usps-label-228/v1.0.0` at the v1.0.1 publication
+    component tag `usps-label-228/v1.0.0` at the same v1.0.1 publication
     commit.
 -   No separate GitHub Release is created for the component tag.
 
